@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Browser</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Recipe Browser</h1>
+  </header>
+
+  <main>
+    <!-- Check out the CSS! We've set the display: none by default -->
+    <section id="recipe-details" class="hidden">
+    </section>
+
+    <section>
+      <h2 id="recipes-heading">Recipes (<span id="recipe-count">0</span>)</h2>
+      <ul id="recipes-list">
+        <!-- It is often a good idea to put in some backup elements in case the fetch fails -->
+        <li data-recipe-id="1">
+          <img src="https://cdn.dummyjson.com/recipe-images/1.webp" alt="Classic Margherita Pizza">
+          <h3>Classic Margherita Pizza</h3>
+          <p>Italian · Easy</p>
+        </li>
+      </ul>
+    </section>
+    
+    <section>
+      <p id="error-message"></p>
+    </section>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
